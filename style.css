@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.shopify.com/s/files/1/0100/7917/4734/products/fireplace-amantii-60-symmetry-3-0-built-in-smart-wifi-electric-fireplace-sym-60-3-33939726205098_1200x.png?v=1654087585);
+    background-position: center;
+}
+
+img {
+    width: 65px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+    z-index: 1;
+}
+
+.clock {
+    background: lightgrey;
+    width:180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid rgb(239, 233, 233);
+    box-shadow: 1px 1px 4px rgba(134, 131, 131, 0.9);
+    position: relative;
+    margin-left: 58px;
+    bottom: 100px;
+}
+
+.clock-bg {
+    width:180px;
+    height: 180px;
+    border-radius: 50%;
+    z-index: 0;
+    top: 0px;
+    align-self: center;
+}
+
+.circular-motion {
+    position: relative;
+    width: 180px; /* set your desired width */
+    height: 180px; /* set your desired height */
+    border-radius: 50%; /* make the container circular */
+    overflow: hidden; /* hide the image overflow */
+  }
+
+  .circular-motion img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* make the image fill the container */
+    height: 100%; /* make the image fill the container */
+    animation: circular-motion 15s linear infinite; /* set the animation properties and rotates to infinite*/
+  }
+  
+  @keyframes circular-motion {
+    from {
+      transform: rotate(0deg); /* start the rotation from 0 degrees */
+    }
+    to {
+      transform: rotate(360deg); /* end the rotation at 360 degrees */
+    }
+  }
+
+
+.numbers div {
+    position: absolute;
+    font-weight: bold;
+    color: goldenrod;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0, .7);
+    z-index: 2;
+}
+
+.twelve {
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+.three {
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.six{
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+.nine{
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+.arrows {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #9a9595;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrows div {
+    position: absolute;
+    background-color: #fff;
+    width: 5px;
+    height: 120px;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 2;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+
+.arrows .hour {
+    height: 52px;
+    transform: rotate(30deg);
+}
+
+.arrows .second {
+    transform: rotate(250deg);
+    background-color: goldenrod;
+    height: 82px;
+}
+
+.arrows .minute {
+    height: 66px;
+}
+
+.arrows .second {
+    width: 3px;
+}
